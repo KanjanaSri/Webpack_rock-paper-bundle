@@ -1,11 +1,18 @@
+import './styles.css';
+import { clearChildren } from './utils';
+import { getChoices, getComputerChoice, getOutcome } from './game';
+import Rock from './assets/rock.png';
+import Paper from './assets/paper.png';
+import Scissors from './assets/scissors.png';
+
 function makeChoiceImage(choice) {
     const image = new Image(100, 100);
     if (choice === 'Scissors') {
-        image.src = './assets/scissors.png';
+        image.src = Scissors;
     } else if (choice === 'Rock') {
-        image.src = './assets/rock.png';
+        image.src = Rock;
     } else {
-        image.src = './assets/paper.png';
+        image.src = Paper;
     }
     image.alt = choice;
     return image;
